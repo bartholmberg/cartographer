@@ -77,7 +77,9 @@ bool ConnectedComponents::TransitivelyConnected(const int trajectory_id_a,
 
 std::vector<std::vector<int>> ConnectedComponents::Components() {
   // Map from cluster exemplar -> growing cluster.
-  absl::flat_hash_map<int, std::vector<int>> map;
+  // BAH, 2/27/2021
+  // absl::flat_hash_map<int, std::vector<int>> map;
+  std::unordered_map<int,std::vector<int>> map;
   absl::MutexLock locker(&lock_);
   for (const auto& trajectory_id_entry : forest_) {
     map[FindSet(trajectory_id_entry.first)].push_back(

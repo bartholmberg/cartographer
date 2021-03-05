@@ -67,7 +67,9 @@ TEST(Collator, Ordering) {
   Collator collator;
   collator.AddTrajectory(
       kTrajectoryId,
-      absl::flat_hash_set<std::string>(kSensorId.begin(), kSensorId.end()),
+      //BAH, 3/04/21
+      //absl::flat_hash_set<std::string>(kSensorId.begin(), kSensorId.end()),
+      std::unordered_set<std::string>(kSensorId.begin(), kSensorId.end()),
       [&received, kTrajectoryId](const std::string& sensor_id,
                                  std::unique_ptr<Data> data) {
         received.push_back(CollatorOutput(kTrajectoryId, data->GetSensorId(),
@@ -134,7 +136,9 @@ TEST(Collator, OrderingMultipleTrajectories) {
   Collator collator;
   collator.AddTrajectory(
       kTrajectoryId[0],
-      absl::flat_hash_set<std::string>(kSensorId.begin(), kSensorId.end()),
+      //BAH,3/4
+      //absl::flat_hash_set<std::string>(kSensorId.begin(), kSensorId.end()),
+      std::unordered_set<std::string>(kSensorId.begin(), kSensorId.end()),
       [&received, kTrajectoryId](const std::string& sensor_id,
                                  std::unique_ptr<Data> data) {
         received.push_back(CollatorOutput(kTrajectoryId[0], data->GetSensorId(),
@@ -142,7 +146,8 @@ TEST(Collator, OrderingMultipleTrajectories) {
       });
   collator.AddTrajectory(
       kTrajectoryId[1],
-      absl::flat_hash_set<std::string>(kSensorId.begin(), kSensorId.end()),
+      //absl::flat_hash_set<std::string>(kSensorId.begin(), kSensorId.end()),
+      std::unordered_set<std::string>(kSensorId.begin(), kSensorId.end()),
       [&received, kTrajectoryId](const std::string& sensor_id,
                                  std::unique_ptr<Data> data) {
         received.push_back(CollatorOutput(kTrajectoryId[1], data->GetSensorId(),

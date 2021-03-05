@@ -42,7 +42,8 @@ class CollatorInterface {
   // for each collated sensor data.
   virtual void AddTrajectory(
       int trajectory_id,
-      const absl::flat_hash_set<std::string>& expected_sensor_ids,
+      //const absl::flat_hash_set<std::string>& expected_sensor_ids,
+      const std::unordered_set<std::string>& expected_sensor_ids,
       const Callback& callback) = 0;
 
   // Marks 'trajectory_id' as finished.

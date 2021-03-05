@@ -39,7 +39,9 @@ CollatedTrajectoryBuilder::CollatedTrajectoryBuilder(
       trajectory_id_(trajectory_id),
       wrapped_trajectory_builder_(std::move(wrapped_trajectory_builder)),
       last_logging_time_(std::chrono::steady_clock::now()) {
-  absl::flat_hash_set<std::string> expected_sensor_id_strings;
+   //BAH, 3/4
+  //absl::flat_hash_set<std::string> expected_sensor_id_strings;
+  std::unordered_set<std::string> expected_sensor_id_strings;
   for (const auto& sensor_id : expected_sensor_ids) {
     if (sensor_id.type == SensorId::SensorType::LANDMARK &&
         !collate_landmarks_) {

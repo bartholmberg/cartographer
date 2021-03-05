@@ -55,7 +55,9 @@ class PointsProcessorPipelineBuilder {
       common::LuaParameterDictionary* dictionary) const;
 
  private:
-  absl::flat_hash_map<std::string, FactoryFunction> factories_;
+ //BAH, 2/27/2021
+ // absl::flat_hash_map<std::string, FactoryFunction> factories_;
+   std::unordered_map<std::string, FactoryFunction> factories_;
 };
 
 // Register all 'PointsProcessor' that ship with Cartographer with this

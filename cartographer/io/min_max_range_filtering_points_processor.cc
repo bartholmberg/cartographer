@@ -40,7 +40,9 @@ MinMaxRangeFilteringPointsProcessor::MinMaxRangeFilteringPointsProcessor(
 
 void MinMaxRangeFilteringPointsProcessor::Process(
     std::unique_ptr<PointsBatch> batch) {
-  absl::flat_hash_set<int> to_remove;
+   //BAH, 2/27
+//  absl::flat_hash_set<int> to_remove;
+  std::unordered_set<int> to_remove;
   for (size_t i = 0; i < batch->points.size(); ++i) {
     const float range_squared =
         (batch->points[i].position - batch->origin).squaredNorm();

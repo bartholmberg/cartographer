@@ -15,7 +15,7 @@
 cmake_minimum_required(VERSION 3.2)
 
 project(cartographer)
-
+#add_subdirectory(extern/abseil-cpp)
 set(CARTOGRAPHER_MAJOR_VERSION 1)
 set(CARTOGRAPHER_MINOR_VERSION 0)
 set(CARTOGRAPHER_PATCH_VERSION 0)
@@ -26,19 +26,26 @@ set(CARTOGRAPHER_HAS_GRPC ${BUILD_GRPC})
 option(BUILD_PROMETHEUS "build Prometheus monitoring support" false)
 
 include("${PROJECT_SOURCE_DIR}/cmake/functions.cmake")
+message( STATUS "===========00cart===>PROJECT_SOURCE_DIR: ${PROJECT_SOURCE_DIR}")
 google_initialize_cartographer_project()
 google_enable_testing()
 
-find_package(absl REQUIRED)
+list( APPEND CMAKE_MODULE_PATH "C:/catkin_ws/abseil-cpp")
+list( APPEND CMAKE_PREFIX_PATH "C:/catkin_ws/abseil-cpp")
+message( STATUS "===========01cart===>CMAKE_MODULE_PATH: ${CMAKE_MODULE_PATH}")
+
 set(BOOST_COMPONENTS iostreams)
 if(WIN32)
-  list(APPEND BOOST_COMPONENTS zlib)
+#  list(APPEND BOOST_COMPONENTS zlib)
+  message( STATUS "===========01.5cart===>BOOST_COMPONENTS: ${BOOST_COMPONENTS}")
   set(Boost_USE_STATIC_LIBS FALSE)
 endif()
+find_package(absl REQUIRED)
 find_package(Boost REQUIRED COMPONENTS ${BOOST_COMPONENTS})
 find_package(Ceres REQUIRED COMPONENTS SuiteSparse)
 find_package(Eigen3 REQUIRED)
 find_package(LuaGoogle REQUIRED)
+message( STATUS "===========02cart===>CMAKE_MODULE_PATH: ${CMAKE_MODULE_PATH}")
 if(WIN32)
   # On Windows, Protobuf is incorrectly found by the bundled CMake module, so prefer native CMake config.
   set(protobuf_MODULE_COMPATIBLE TRUE CACHE INTERNAL "")
@@ -268,6 +275,10 @@ target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC
   ${PROTOBUF_INCLUDE_DIR})
 # TODO(hrapp): This should not explicitly list pthread and use
 # PROTOBUF_LIBRARIES, but that failed on first try.
+# BAH, 3/1
+message( STATUS "protobuf lib:  ${PROTOBUF_LIBRARY}")
+#target_link_libraries(${PROJECT_NAME}  PUBLIC  "C:/opt/rosdeps/stow/absl/lib/absl::flat_hash_map"   )
+
 target_link_libraries(${PROJECT_NAME} PUBLIC ${PROTOBUF_LIBRARY} 
   absl::algorithm
   absl::base
@@ -282,6 +293,7 @@ target_link_libraries(${PROJECT_NAME} PUBLIC ${PROTOBUF_LIBRARY}
   absl::time
   absl::utility 
 )
+
 if (NOT WIN32)
   target_link_libraries(${PROJECT_NAME} PUBLIC pthread)
 endif()

@@ -67,7 +67,9 @@ struct PointsBatch {
 };
 
 // Removes the indices in 'to_remove' from 'batch'.
-void RemovePoints(absl::flat_hash_set<int> to_remove, PointsBatch* batch);
+//void RemovePoints(absl::flat_hash_set<int> to_remove, PointsBatch* batch);
+//BAH, 2/27/2021
+void RemovePoints(std::unordered_set<int> to_remove, PointsBatch* batch);
 
 }  // namespace io
 }  // namespace cartographer

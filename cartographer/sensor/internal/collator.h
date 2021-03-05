@@ -39,7 +39,9 @@ class Collator : public CollatorInterface {
 
   void AddTrajectory(
       int trajectory_id,
-      const absl::flat_hash_set<std::string>& expected_sensor_ids,
+      // BAH, 3/4
+      //const absl::flat_hash_set<std::string>& expected_sensor_ids,
+      const std::unordered_set<std::string>& expected_sensor_ids,
       const Callback& callback) override;
 
   void FinishTrajectory(int trajectory_id) override;
@@ -55,7 +57,8 @@ class Collator : public CollatorInterface {
   OrderedMultiQueue queue_;
 
   // Map of trajectory ID to all associated QueueKeys.
-  absl::flat_hash_map<int, std::vector<QueueKey>> queue_keys_;
+  //absl::flat_hash_map<int, std::vector<QueueKey>> queue_keys_;
+  std::unordered_map<int,std::vector<QueueKey>> queue_keys_;
 };
 
 }  // namespace sensor

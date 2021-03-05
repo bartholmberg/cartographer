@@ -39,8 +39,9 @@ std::string Histogram::ToString(const int buckets) const {
   const float max = *std::max_element(values_.begin(), values_.end());
   const float mean =
       std::accumulate(values_.begin(), values_.end(), 0.f) / values_.size();
-  std::string result = absl::StrCat("Count: ", values_.size(), "  Min: ", min,
-                                    "  Max: ", max, "  Mean: ", mean);
+  //BAH, 2/27/2021
+  //std::string result = absl::StrCat("Count: ", values_.size(), "  Min: ", min, "  Max: ", max, "  Mean: ", mean);
+  std::string result = "Count: " +std::to_string(values_.size())+ "  Min: "+ std::to_string(min)+ "  Max: "+ std::to_string(max)+ "  Mean: "+ std::to_string(mean);
   if (min == max) {
     return result;
   }
@@ -60,8 +61,9 @@ std::string Histogram::ToString(const int buckets) const {
       }
     }
     total_count += count;
-    absl::StrAppendFormat(&result, "\n[%f, %f%c", lower_bound, upper_bound,
-                          i + 1 == buckets ? ']' : ')');
+      //BAH, 2/27/2021
+    //absl::StrAppendFormat(&result, "\n[%f, %f%c", lower_bound, upper_bound,i + 1 == buckets ? ']' : ')');
+    result = "\n[" + std::to_string(lower_bound) + std::to_string(upper_bound )  + "]";                   
     constexpr int kMaxBarChars = 20;
     const int bar =
         (count * kMaxBarChars + values_.size() / 2) / values_.size();
