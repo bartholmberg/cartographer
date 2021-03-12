@@ -1,0 +1,297 @@
+- tar:
+    local-name: actionlib
+    uri: https://github.com/ros-gbp/actionlib-release/archive/release/melodic/actionlib/1.12.1-1.tar.gz
+    version: actionlib-release-release-melodic-actionlib-1.12.1-1
+- tar:
+    local-name: actionlib_msgs
+    uri: https://github.com/ros-gbp/common_msgs-release/archive/release/melodic/actionlib_msgs/1.12.8-1.tar.gz
+    version: common_msgs-release-release-melodic-actionlib_msgs-1.12.8-1
+- tar:
+    local-name: angles
+    uri: https://github.com/ros-gbp/geometry_angles_utils-release/archive/release/melodic/angles/1.9.12-1.tar.gz
+    version: geometry_angles_utils-release-release-melodic-angles-1.9.12-1
+- tar:
+    local-name: cartographer
+    uri: https://github.com/ros-gbp/cartographer-release/archive/release/melodic/cartographer/1.0.0-0.tar.gz
+    version: cartographer-release-release-melodic-cartographer-1.0.0-0
+- tar:
+    local-name: cartographer_ros
+    uri: https://github.com/ros-gbp/cartographer_ros-release/archive/release/melodic/cartographer_ros/1.0.0-1.tar.gz
+    version: cartographer_ros-release-release-melodic-cartographer_ros-1.0.0-1
+- tar:
+    local-name: cartographer_ros_msgs
+    uri: https://github.com/ros-gbp/cartographer_ros-release/archive/release/melodic/cartographer_ros_msgs/1.0.0-1.tar.gz
+    version: cartographer_ros-release-release-melodic-cartographer_ros_msgs-1.0.0-1
+- tar:
+    local-name: catkin
+    uri: https://github.com/ros-gbp/catkin-release/archive/release/melodic/catkin/0.7.29-1.tar.gz
+    version: catkin-release-release-melodic-catkin-0.7.29-1
+- tar:
+    local-name: class_loader
+    uri: https://github.com/ros-gbp/class_loader-release/archive/release/melodic/class_loader/0.4.1-0.tar.gz
+    version: class_loader-release-release-melodic-class_loader-0.4.1-0
+- tar:
+    local-name: cmake_modules
+    uri: https://github.com/ros-gbp/cmake_modules-release/archive/release/melodic/cmake_modules/0.4.2-0.tar.gz
+    version: cmake_modules-release-release-melodic-cmake_modules-0.4.2-0
+- tar:
+    local-name: cpp_common
+    uri: https://github.com/ros-gbp/roscpp_core-release/archive/release/melodic/cpp_common/0.6.14-1.tar.gz
+    version: roscpp_core-release-release-melodic-cpp_common-0.6.14-1
+- tar:
+    local-name: eigen_conversions
+    uri: https://github.com/ros-gbp/geometry-release/archive/release/melodic/eigen_conversions/1.12.1-1.tar.gz
+    version: geometry-release-release-melodic-eigen_conversions-1.12.1-1
+- tar:
+    local-name: gencpp
+    uri: https://github.com/ros-gbp/gencpp-release/archive/release/melodic/gencpp/0.6.5-1.tar.gz
+    version: gencpp-release-release-melodic-gencpp-0.6.5-1
+- tar:
+    local-name: geneus
+    uri: https://github.com/tork-a/geneus-release/archive/release/melodic/geneus/2.2.6-0.tar.gz
+    version: geneus-release-release-melodic-geneus-2.2.6-0
+- tar:
+    local-name: genlisp
+    uri: https://github.com/ros-gbp/genlisp-release/archive/release/melodic/genlisp/0.4.16-0.tar.gz
+    version: genlisp-release-release-melodic-genlisp-0.4.16-0
+- tar:
+    local-name: genmsg
+    uri: https://github.com/ros-gbp/genmsg-release/archive/release/melodic/genmsg/0.5.16-1.tar.gz
+    version: genmsg-release-release-melodic-genmsg-0.5.16-1
+- tar:
+    local-name: gennodejs
+    uri: https://github.com/RethinkRobotics-release/gennodejs-release/archive/release/melodic/gennodejs/2.0.1-0.tar.gz
+    version: gennodejs-release-release-melodic-gennodejs-2.0.1-0
+- tar:
+    local-name: genpy
+    uri: https://github.com/ros-gbp/genpy-release/archive/release/melodic/genpy/0.6.14-1.tar.gz
+    version: genpy-release-release-melodic-genpy-0.6.14-1
+- tar:
+    local-name: geometry_msgs
+    uri: https://github.com/ros-gbp/common_msgs-release/archive/release/melodic/geometry_msgs/1.12.8-1.tar.gz
+    version: common_msgs-release-release-melodic-geometry_msgs-1.12.8-1
+- tar:
+    local-name: kdl_parser
+    uri: https://github.com/ros-gbp/kdl_parser-release/archive/release/melodic/kdl_parser/1.13.1-0.tar.gz
+    version: kdl_parser-release-release-melodic-kdl_parser-1.13.1-0
+- tar:
+    local-name: message_filters
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/message_filters/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-message_filters-1.14.10-1
+- tar:
+    local-name: message_generation
+    uri: https://github.com/ros-gbp/message_generation-release/archive/release/melodic/message_generation/0.4.1-1.tar.gz
+    version: message_generation-release-release-melodic-message_generation-0.4.1-1
+- tar:
+    local-name: message_runtime
+    uri: https://github.com/ros-gbp/message_runtime-release/archive/release/melodic/message_runtime/0.4.12-0.tar.gz
+    version: message_runtime-release-release-melodic-message_runtime-0.4.12-0
+- tar:
+    local-name: nav_msgs
+    uri: https://github.com/ros-gbp/common_msgs-release/archive/release/melodic/nav_msgs/1.12.8-1.tar.gz
+    version: common_msgs-release-release-melodic-nav_msgs-1.12.8-1
+- tar:
+    local-name: orocos_kdl
+    uri: https://github.com/orocos/orocos-kdl-release/archive/release/melodic/orocos_kdl/1.4.0-0.tar.gz
+    version: orocos-kdl-release-release-melodic-orocos_kdl-1.4.0-0
+- tar:
+    local-name: pcl_conversions
+    uri: https://github.com/ros-gbp/perception_pcl-release/archive/release/melodic/pcl_conversions/1.7.1-1.tar.gz
+    version: perception_pcl-release-release-melodic-pcl_conversions-1.7.1-1
+- tar:
+    local-name: pcl_msgs
+    uri: https://github.com/ros-gbp/pcl_msgs-release/archive/release/melodic/pcl_msgs/0.2.0-0.tar.gz
+    version: pcl_msgs-release-release-melodic-pcl_msgs-0.2.0-0
+- tar:
+    local-name: pluginlib
+    uri: https://github.com/ros-gbp/pluginlib-release/archive/release/melodic/pluginlib/1.12.1-0.tar.gz
+    version: pluginlib-release-release-melodic-pluginlib-1.12.1-0
+- tar:
+    local-name: robot_state_publisher
+    uri: https://github.com/ros-gbp/robot_state_publisher-release/archive/release/melodic/robot_state_publisher/1.14.1-1.tar.gz
+    version: robot_state_publisher-release-release-melodic-robot_state_publisher-1.14.1-1
+- tar:
+    local-name: ros_environment
+    uri: https://github.com/ros-gbp/ros_environment-release/archive/release/melodic/ros_environment/1.2.3-1.tar.gz
+    version: ros_environment-release-release-melodic-ros_environment-1.2.3-1
+- tar:
+    local-name: rosbag
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosbag/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-rosbag-1.14.10-1
+- tar:
+    local-name: rosbag_storage
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosbag_storage/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-rosbag_storage-1.14.10-1
+- tar:
+    local-name: rosbash
+    uri: https://github.com/ros-gbp/ros-release/archive/release/melodic/rosbash/1.14.9-1.tar.gz
+    version: ros-release-release-melodic-rosbash-1.14.9-1
+- tar:
+    local-name: rosbuild
+    uri: https://github.com/ros-gbp/ros-release/archive/release/melodic/rosbuild/1.14.9-1.tar.gz
+    version: ros-release-release-melodic-rosbuild-1.14.9-1
+- tar:
+    local-name: rosclean
+    uri: https://github.com/ros-gbp/ros-release/archive/release/melodic/rosclean/1.14.9-1.tar.gz
+    version: ros-release-release-melodic-rosclean-1.14.9-1
+- tar:
+    local-name: rosconsole
+    uri: https://github.com/ros-gbp/rosconsole-release/archive/release/melodic/rosconsole/1.13.18-1.tar.gz
+    version: rosconsole-release-release-melodic-rosconsole-1.13.18-1
+- tar:
+    local-name: rosconsole_bridge
+    uri: https://github.com/ros-gbp/rosconsole_bridge-release/archive/release/melodic/rosconsole_bridge/0.5.3-0.tar.gz
+    version: rosconsole_bridge-release-release-melodic-rosconsole_bridge-0.5.3-0
+- tar:
+    local-name: roscpp
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/roscpp/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-roscpp-1.14.10-1
+- tar:
+    local-name: roscpp_serialization
+    uri: https://github.com/ros-gbp/roscpp_core-release/archive/release/melodic/roscpp_serialization/0.6.14-1.tar.gz
+    version: roscpp_core-release-release-melodic-roscpp_serialization-0.6.14-1
+- tar:
+    local-name: roscpp_traits
+    uri: https://github.com/ros-gbp/roscpp_core-release/archive/release/melodic/roscpp_traits/0.6.14-1.tar.gz
+    version: roscpp_core-release-release-melodic-roscpp_traits-0.6.14-1
+- tar:
+    local-name: rosgraph
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosgraph/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-rosgraph-1.14.10-1
+- tar:
+    local-name: rosgraph_msgs
+    uri: https://github.com/ros-gbp/ros_comm_msgs-release/archive/release/melodic/rosgraph_msgs/1.11.2-0.tar.gz
+    version: ros_comm_msgs-release-release-melodic-rosgraph_msgs-1.11.2-0
+- tar:
+    local-name: roslang
+    uri: https://github.com/ros-gbp/ros-release/archive/release/melodic/roslang/1.14.9-1.tar.gz
+    version: ros-release-release-melodic-roslang-1.14.9-1
+- tar:
+    local-name: roslaunch
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/roslaunch/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-roslaunch-1.14.10-1
+- tar:
+    local-name: roslib
+    uri: https://github.com/ros-gbp/ros-release/archive/release/melodic/roslib/1.14.9-1.tar.gz
+    version: ros-release-release-melodic-roslib-1.14.9-1
+- tar:
+    local-name: roslz4
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/roslz4/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-roslz4-1.14.10-1
+- tar:
+    local-name: rosmake
+    uri: https://github.com/ros-gbp/ros-release/archive/release/melodic/rosmake/1.14.9-1.tar.gz
+    version: ros-release-release-melodic-rosmake-1.14.9-1
+- tar:
+    local-name: rosmaster
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosmaster/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-rosmaster-1.14.10-1
+- tar:
+    local-name: rosmsg
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosmsg/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-rosmsg-1.14.10-1
+- tar:
+    local-name: rosnode
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosnode/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-rosnode-1.14.10-1
+- tar:
+    local-name: rosout
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosout/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-rosout-1.14.10-1
+- tar:
+    local-name: rospack
+    uri: https://github.com/ros-gbp/rospack-release/archive/release/melodic/rospack/2.5.6-1.tar.gz
+    version: rospack-release-release-melodic-rospack-2.5.6-1
+- tar:
+    local-name: rosparam
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosparam/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-rosparam-1.14.10-1
+- tar:
+    local-name: rospy
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rospy/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-rospy-1.14.10-1
+- tar:
+    local-name: rosservice
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rosservice/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-rosservice-1.14.10-1
+- tar:
+    local-name: rostest
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rostest/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-rostest-1.14.10-1
+- tar:
+    local-name: rostime
+    uri: https://github.com/ros-gbp/roscpp_core-release/archive/release/melodic/rostime/0.6.14-1.tar.gz
+    version: roscpp_core-release-release-melodic-rostime-0.6.14-1
+- tar:
+    local-name: rostopic
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/rostopic/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-rostopic-1.14.10-1
+- tar:
+    local-name: rosunit
+    uri: https://github.com/ros-gbp/ros-release/archive/release/melodic/rosunit/1.14.9-1.tar.gz
+    version: ros-release-release-melodic-rosunit-1.14.9-1
+- tar:
+    local-name: roswtf
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/roswtf/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-roswtf-1.14.10-1
+- tar:
+    local-name: sensor_msgs
+    uri: https://github.com/ros-gbp/common_msgs-release/archive/release/melodic/sensor_msgs/1.12.8-1.tar.gz
+    version: common_msgs-release-release-melodic-sensor_msgs-1.12.8-1
+- tar:
+    local-name: std_msgs
+    uri: https://github.com/ros-gbp/std_msgs-release/archive/release/melodic/std_msgs/0.5.12-0.tar.gz
+    version: std_msgs-release-release-melodic-std_msgs-0.5.12-0
+- tar:
+    local-name: std_srvs
+    uri: https://github.com/ros-gbp/ros_comm_msgs-release/archive/release/melodic/std_srvs/1.11.2-0.tar.gz
+    version: ros_comm_msgs-release-release-melodic-std_srvs-1.11.2-0
+- tar:
+    local-name: tf
+    uri: https://github.com/ros-gbp/geometry-release/archive/release/melodic/tf/1.12.1-1.tar.gz
+    version: geometry-release-release-melodic-tf-1.12.1-1
+- tar:
+    local-name: tf2
+    uri: https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2/0.6.5-0.tar.gz
+    version: geometry2-release-release-melodic-tf2-0.6.5-0
+- tar:
+    local-name: tf2_eigen
+    uri: https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_eigen/0.6.5-0.tar.gz
+    version: geometry2-release-release-melodic-tf2_eigen-0.6.5-0
+- tar:
+    local-name: tf2_kdl
+    uri: https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_kdl/0.6.5-0.tar.gz
+    version: geometry2-release-release-melodic-tf2_kdl-0.6.5-0
+- tar:
+    local-name: tf2_msgs
+    uri: https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_msgs/0.6.5-0.tar.gz
+    version: geometry2-release-release-melodic-tf2_msgs-0.6.5-0
+- tar:
+    local-name: tf2_py
+    uri: https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_py/0.6.5-0.tar.gz
+    version: geometry2-release-release-melodic-tf2_py-0.6.5-0
+- tar:
+    local-name: tf2_ros
+    uri: https://github.com/ros-gbp/geometry2-release/archive/release/melodic/tf2_ros/0.6.5-0.tar.gz
+    version: geometry2-release-release-melodic-tf2_ros-0.6.5-0
+- tar:
+    local-name: topic_tools
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/topic_tools/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-topic_tools-1.14.10-1
+- tar:
+    local-name: urdf
+    uri: https://github.com/ros-gbp/urdf-release/archive/release/melodic/urdf/1.13.2-1.tar.gz
+    version: urdf-release-release-melodic-urdf-1.13.2-1
+- tar:
+    local-name: urdf_parser_plugin
+    uri: https://github.com/ros-gbp/urdf-release/archive/release/melodic/urdf_parser_plugin/1.13.2-1.tar.gz
+    version: urdf-release-release-melodic-urdf_parser_plugin-1.13.2-1
+- tar:
+    local-name: visualization_msgs
+    uri: https://github.com/ros-gbp/common_msgs-release/archive/release/melodic/visualization_msgs/1.12.8-1.tar.gz
+    version: common_msgs-release-release-melodic-visualization_msgs-1.12.8-1
+- tar:
+    local-name: xmlrpcpp
+    uri: https://github.com/ros-gbp/ros_comm-release/archive/release/melodic/xmlrpcpp/1.14.10-1.tar.gz
+    version: ros_comm-release-release-melodic-xmlrpcpp-1.14.10-1
+
