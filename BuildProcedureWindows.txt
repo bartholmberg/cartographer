@@ -1,0 +1,12 @@
+# cartographer ROS build procedure on windows
+get catkin workspace per
+# requires noetic at c:/opt/noetic
+#  also:  c:\opt\ros\noetic\x64\setup.bat
+# use the pkg install added <where to add pkg.rosinstall>
+# with instructions here
+https://ms-iot.github.io/ROSOnWindows/GettingStarted/UsingROSonWindows.html
+# use https://github.com/bartholmberg/abseil-cpp/tree/BAH/dev0 into c:\catkin_ws
+catkin_make_isolated   --install --use-ninja
+
+also see:
+https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html
