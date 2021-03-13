@@ -5,8 +5,12 @@ get catkin workspace per
 # use the pkg install added <where to add pkg.rosinstall>
 # with instructions here
 https://ms-iot.github.io/ROSOnWindows/GettingStarted/UsingROSonWindows.html
+# cd c:\catkin_ws c:\catkin_ws
+# copy pkg.rosinstall to 
+#vcs import --force src < pkg.rosinstall
+
 # use https://github.com/bartholmberg/abseil-cpp/tree/BAH/dev0 into c:\catkin_ws
-catkin_make_isolated   --install --use-ninja
+#catkin_make_isolated   --install --use-ninja
 
 also see:
 https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html
