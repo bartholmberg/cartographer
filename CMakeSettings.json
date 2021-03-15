@@ -24,11 +24,10 @@
     },
     {
       "name": "cartographer",
-      "cacheRoot": "C:\\catkin_ws\\build_isolated\\cartographer\\install"
       "generator": "Ninja",
       "configurationType": "RelWithDebInfo",
-      "buildRoot": "C:\\catkin_ws\\build_isolated\\${name}",
-      "installRoot": "C:\\catkin_ws\\build_isolated\\${name}\\install",
+      "buildRoot": "C:\\catkin_ws\\build_isolated\\cartographer\\install",
+      "installRoot": "C:\\catkin_ws\\build_isolated\\cartographer\\install",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "",
       "ctestCommandArgs": "",

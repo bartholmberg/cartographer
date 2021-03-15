@@ -71,9 +71,10 @@ ProtoStreamReader::ProtoStreamReader(const std::string& filename)
     : in_(filename, std::ios::in | std::ios::binary) {
   uint64 magic;
   if (!ReadSizeAsLittleEndian(&in_, &magic) || magic != kMagic) {
+    std::cout <<">>>>>>>>>>>>>>>>>>>>>got: " <<magic << kMagic;
     in_.setstate(std::ios::failbit);
   }
-  CHECK(in_.good()) << "Failed to open proto stream '" << filename << "'.";
+  CHECK(in_.good()) << "*****<check compile      > Failed to open proto stream '" << filename << "'.";
 }
 
 bool ProtoStreamReader::Read(std::string* decompressed_data) {
