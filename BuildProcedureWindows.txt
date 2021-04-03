@@ -8,9 +8,13 @@ https://ms-iot.github.io/ROSOnWindows/GettingStarted/UsingROSonWindows.html
 # cd c:\catkin_ws c:\catkin_ws
 # copy pkg.rosinstall to 
 #vcs import --force src < pkg.rosinstall
+## looks like only need cartographer and cartographer_ros for build.  pkg.rosinstall has a lot more stuff, not necessary
 
 # use https://github.com/bartholmberg/abseil-cpp/tree/BAH/dev0 into c:\catkin_ws
 #catkin_make_isolated   --install --use-ninja
 
 also see:
 https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html
+
+##run cmake gui from catkin_ws build command line ( has run > c:\opt\ros\noetic\x64\setup.bat)
+"D:\Program Files\CMake\bin\cmake-gui.exe"

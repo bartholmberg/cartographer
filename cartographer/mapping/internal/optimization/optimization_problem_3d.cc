@@ -295,13 +295,18 @@ void OptimizationProblem3D::Solve(
       first_submap = false;
       // Fix the first submap of the first trajectory except for allowing
       // gravity alignment.
-      C_submaps.Insert(
-          submap_id_data.id,
-          CeresPose(submap_id_data.data.global_pose,
-                    translation_parameterization(),
-                    absl::make_unique<ceres::AutoDiffLocalParameterization<
-                        ConstantYawQuaternionPlus, 4, 2>>(),
-                    &problem));
+      std::cout << "--------------blah blah got here" << std::endl;
+      std::cout << "--------------blah blah and here too" << std::endl;
+      //BAH, 4/3/2021
+      //typedef ceres::AutoDiffLocalParameterization<ConstantYawQuaternionPlus, 4, 2> fooT0;
+      typedef ceres::AutoDiffLocalParameterization<ConstantYawQuaternionPlus, 4, 3> fooT0;
+      //typedef std::unique_ptr<fooT0> fooT1;
+      std::unique_ptr<ceres::LocalParameterization> foo= std::make_unique<fooT0>();
+      static auto  tptr = foo.get();
+      auto foo2 = CeresPose(submap_id_data.data.global_pose,
+                            translation_parameterization(),std::move(foo), &problem);
+      C_submaps.Insert(submap_id_data.id,foo2);
+      std::cout << "address of:" << std::hex<<tptr << std::endl;
       problem.SetParameterBlockConstant(
           C_submaps.at(submap_id_data.id).translation());
     } else {

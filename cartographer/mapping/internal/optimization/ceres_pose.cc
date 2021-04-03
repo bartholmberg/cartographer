@@ -38,7 +38,19 @@ CeresPose::CeresPose(
   problem->AddParameterBlock(data_->rotation.data(), 4,
                              rotation_parametrization.release());
 }
-
+/*
+CeresPose::CeresPose(
+    const transform::Rigid3d& pose,
+    std::unique_ptr<ceres::LocalParameterization> translation_parametrization,
+    std::unique_ptr<ceres::LocalParameterization> rotation_parametrization,
+    ceres::Problem* problem)
+    : data_(std::make_shared<CeresPose::Data>(FromPose(pose))) {
+  static auto tempTr = translation_parametrization.get();
+  static auto tempRot = rotation_parametrization.get();
+  problem->AddParameterBlock(data_->translation.data(), 3, tempTr);
+  problem->AddParameterBlock(data_->rotation.data(), 4, tempRot);
+}
+*/
 const transform::Rigid3d CeresPose::ToRigid() const {
   return transform::Rigid3d::FromArrays(data_->rotation, data_->translation);
 }

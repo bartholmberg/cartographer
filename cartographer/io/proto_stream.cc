@@ -37,7 +37,9 @@ bool ReadSizeAsLittleEndian(std::istream* in, uint64* size) {
   *size = 0;
   for (int i = 0; i != 8; ++i) {
     *size >>= 8;
-    *size += static_cast<uint64>(in->get()) << 56;
+    //*size += static_cast<uint64>(in->get()) << 56;
+    *size += static_cast<size_t>(in->get()) << 56;
+    //size_t
   }
   return !in->fail();
 }
@@ -71,8 +73,10 @@ ProtoStreamReader::ProtoStreamReader(const std::string& filename)
     : in_(filename, std::ios::in | std::ios::binary) {
   uint64 magic;
   if (!ReadSizeAsLittleEndian(&in_, &magic) || magic != kMagic) {
-    std::cout <<">>>>>>>>>>>>>>>>>>>>>got: " <<magic << kMagic;
-    in_.setstate(std::ios::failbit);
+    std::cout <<">>>>>>>>>>>>>>>>>>>>>got: "<< std::hex << magic <<":" <<std::hex <<kMagic;
+   // in_.setstate(std::ios::failbit);
+   // while (1) { //wait forever
+   // }
   }
   CHECK(in_.good()) << "*****<check compile      > Failed to open proto stream '" << filename << "'.";
 }

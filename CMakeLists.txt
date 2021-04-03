@@ -13,7 +13,7 @@
 # limitations under the License.
 
 cmake_minimum_required(VERSION 3.2)
-
+set(CMAKE_INSTALL_PREFIX "C:/catkin_ws/install_isolated" CACHE PATH "..." FORCE)
 project(cartographer)
 #add_subdirectory(extern/abseil-cpp)
 set(CARTOGRAPHER_MAJOR_VERSION 1)
@@ -29,7 +29,7 @@ include("${PROJECT_SOURCE_DIR}/cmake/functions.cmake")
 message( STATUS "===========00cart===>PROJECT_SOURCE_DIR: ${PROJECT_SOURCE_DIR}")
 google_initialize_cartographer_project()
 google_enable_testing()
-
+message( STATUS "+++==========00.5 cart===>CMAKE_INSTALL_PREFIX: ${CMAKE_INSTALL_PREFIX}")
 list( APPEND CMAKE_MODULE_PATH "C:/catkin_ws/abseil-cpp")
 list( APPEND CMAKE_PREFIX_PATH "C:/catkin_ws/abseil-cpp")
 message( STATUS "===========01cart===>CMAKE_MODULE_PATH: ${CMAKE_MODULE_PATH}")

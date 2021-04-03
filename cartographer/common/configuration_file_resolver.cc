@@ -35,6 +35,7 @@ ConfigurationFileResolver::ConfigurationFileResolver(
 std::string ConfigurationFileResolver::GetFullPathOrDie(
     const std::string& basename) {
   for (const auto& path : configuration_files_directories_) {
+	        LOG(INFO) << "**************:  "<<path << "\n";
     const std::string filename = path + "/" + basename;
     std::ifstream stream(filename.c_str());
     if (stream.good()) {
