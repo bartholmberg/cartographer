@@ -1,0 +1,21 @@
+These are instructions for cartographer_ros build on windows 10
+Assume admin cmd vs2019 dev shell
+[need more details?
+see http://wiki.ros.org/Installation/Windows
+    https://ms-iot.github.io/ROSOnWindows/GettingStarted/UsingROSonWindows.html]
+
+1) install ros noetic
+at admin prompt execute c:\opt\ros\noetic\x64\setup.bat
+(note: can execute catkin_make commands after running setup)
+
+2) mkdir c:\catkin_ws, cd catkin_ws, mkdir src
+
+3) 
+
+4) add from github(BAH/dev0 branch) get cartographer_ros, cartographer, azure_kinect_ros_driver to c:\catkin_ws\src\
+    add abseil-cpp from github to c:\catkin_ws 
+5) run C:\catkin_ws\src\cartographer\scripts\install_abseil.sh (manually at cmd prompt)
+
+--------------------------
+also run "D:\Program Files\CMake\bin\cmake-gui.exe" and "devenv.exe"
+from a build shell.
