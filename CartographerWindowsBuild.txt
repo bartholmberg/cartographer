@@ -18,6 +18,8 @@ at admin prompt execute c:\opt\ros\noetic\x64\setup.bat
 
 6) uninstall cartographer from ros,  e.g. rename C:\opt\ros\noetic\x64\include\cartographer -> C:\opt\ros\noetic\x64\include\[uninstall]cartographer ( same for cartographer_ros)
    these includes can interfere with the versions of these projects in catkin_ws 
+   
+7)  copy C:\catkin_ws\src\Azure_Kinect_ROS_Driver\config to C:\catkin_ws\install_isolated\share\azure_kinect_ros_driver\config
 --------------------------
 also run "D:\Program Files\CMake\bin\cmake-gui.exe" and "devenv.exe"
 from a build shell.
