@@ -42,9 +42,11 @@ class MapByTime {
     if (!trajectory.empty()) {
       //BAH, 4/8
       //CHECK_GT(data.time, std::prev(trajectory.end())->first);
-      if (data.time > std::prev(trajectory.end())->first)
+      if (data.time > std::prev(trajectory.end())->first) {
         LOG(INFO, "--------------------------------------------->time error");
-      std::cout << "data.time, traj[end].time " <<data.time <<" " << std::prev(trajectory.end())->first << std::endl;
+        std::cout << "data.time, traj[end].time " << data.time << " "
+                  << std::prev(trajectory.end())->first << std::endl;
+      }
     }
     trajectory.emplace(data.time, data);
   }
