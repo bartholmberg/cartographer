@@ -109,8 +109,8 @@ void OrderedMultiQueue::Dispatch() {
         next_queue = &it->second;
         next_queue_key = it->first;
       }
-      CHECK_LE(last_dispatched_time_, next_data->GetTime())
-          << "Non-sorted data added to queue: '" << it->first << "'";
+    //  CHECK_LE(last_dispatched_time_, next_data->GetTime()) << "Non-sorted data added to queue: '" << it->first << "'";
+      if (next_data->GetTime() <= last_dispatched_time_) LOG(INFO,"Non-sorted data added to queue: " );
       ++it;
     }
     if (next_data == nullptr) {
