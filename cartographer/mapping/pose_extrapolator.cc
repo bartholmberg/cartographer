@@ -89,8 +89,9 @@ void PoseExtrapolator::AddPose(const common::Time time,
 }
 
 void PoseExtrapolator::AddImuData(const sensor::ImuData& imu_data) {
-  CHECK(timed_pose_queue_.empty() ||
-        imu_data.time >= timed_pose_queue_.back().time);
+    // BAH, april 15,2021
+ // CHECK(timed_pose_queue_.empty() || imu_data.time >= timed_pose_queue_.back().time);
+  CHECK(timed_pose_queue_.empty());
   imu_data_.push_back(imu_data);
   TrimImuData();
 }
