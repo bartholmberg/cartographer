@@ -91,7 +91,9 @@ void PoseExtrapolator::AddPose(const common::Time time,
 void PoseExtrapolator::AddImuData(const sensor::ImuData& imu_data) {
     // BAH, april 15,2021
  // CHECK(timed_pose_queue_.empty() || imu_data.time >= timed_pose_queue_.back().time);
-  CHECK(timed_pose_queue_.empty());
+    if ( timed_pose_queue_.empty() || (imu_data.time >= timed_pose_queue_.back().time) )
+      //LOG(INFO <<"IMU add fail, either timed pose queue empty or old imu data\n";
+      return;
   imu_data_.push_back(imu_data);
   TrimImuData();
 }
