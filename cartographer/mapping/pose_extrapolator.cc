@@ -21,7 +21,7 @@
 #include "absl/memory/memory.h"
 #include "cartographer/transform/transform.h"
 #include "glog/logging.h"
-
+#include <chrono>
 namespace cartographer {
 namespace mapping {
 
@@ -87,14 +87,24 @@ void PoseExtrapolator::AddPose(const common::Time time,
   odometry_imu_tracker_ = absl::make_unique<ImuTracker>(*imu_tracker_);
   extrapolation_imu_tracker_ = absl::make_unique<ImuTracker>(*imu_tracker_);
 }
-
+static int imucnt = 0;
 void PoseExtrapolator::AddImuData(const sensor::ImuData& imu_data) {
     // BAH, april 15,2021
  // CHECK(timed_pose_queue_.empty() || imu_data.time >= timed_pose_queue_.back().time);
-    if ( timed_pose_queue_.empty() || (imu_data.time >= timed_pose_queue_.back().time) )
+  //  if ( timed_pose_queue_.empty() || (imu_data.time >= timed_pose_queue_.back().time) )
       //LOG(INFO <<"IMU add fail, either timed pose queue empty or old imu data\n";
-      return;
-  imu_data_.push_back(imu_data);
+  //    return;
+   
+    imu_data_.push_back(imu_data);
+    if ((imucnt++ % 15) == 0) {
+       std::chrono::duration<double> tmpt =imu_data.time -timed_pose_queue_.back().time;
+       //auto tsec=std::chrono::duration_cast<std::chrono::seconds>(tmpt);
+       //static auto weird = (int)tsec.count();
+     //  std::cout << "duration: " << tsec.count() << std::endl;
+       int weird = imucnt;
+       LOG(INFO) << "imu sample: " << imu_data.linear_acceleration << " "
+                 << imu_data.angular_velocity <<"duration: " <<weird  <<std::endl;
+    }
   TrimImuData();
 }
 
