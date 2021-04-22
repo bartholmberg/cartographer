@@ -18,6 +18,6 @@ MAP_BUILDER_K4A = {
   use_trajectory_builder_2d = false,
   use_trajectory_builder_3d = false,
   num_background_threads = 4,
-  pose_graph = POSE_GRAPH_K4A,
+  pose_graph = POSE_GRAPH,
   collate_by_trajectory = false,
 }

@@ -14,8 +14,8 @@
 
 
 TRAJECTORY_BUILDER_K4A = {
-  trajectory_builder_2d = TRAJECTORY_BUILDER_K4A2D,
-  trajectory_builder_3d = TRAJECTORY_BUILDER_K4A3D,
+  trajectory_builder_2d = TRAJECTORY_BUILDER_2D,
+  trajectory_builder_3d = TRAJECTORY_BUILDER_3D,
 --  pure_localization_trimmer = {
 --    max_submaps_to_keep = 3,
 --  },
@@ -23,7 +23,7 @@ TRAJECTORY_BUILDER_K4A = {
   collate_landmarks = false,
 }
 
-TRAJECTORY_BUILDER_K4A2D = {
+TRAJECTORY_BUILDER_2D = {
   use_imu_data = true,
   min_range = 0.,
   max_range = 30.,
@@ -127,7 +127,7 @@ TRAJECTORY_BUILDER_K4A2D = {
 MAX_3D_RANGE = 60.
 INTENSITY_THRESHOLD = 40
 
-TRAJECTORY_BUILDER_K4A3D = {
+TRAJECTORY_BUILDER_3D = {
   min_range = 1.,
   max_range = MAX_3D_RANGE,
   num_accumulated_range_data = 1,

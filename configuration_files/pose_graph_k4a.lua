@@ -12,7 +12,7 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
-POSE_GRAPH_K4A = {
+POSE_GRAPH = {
   optimize_every_n_nodes = 90,
   constraint_builder = {
     sampling_ratio = 0.3,
