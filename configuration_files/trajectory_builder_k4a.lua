@@ -14,7 +14,7 @@
 TRAJECTORY_BUILDER_2D = {
   use_imu_data = true,
   min_range = 0.,
-  max_range = 30.,
+  max_range = 6.,
   min_z = -0.8,
   max_z = 2.,
   missing_data_ray_length = 5.,
@@ -30,7 +30,7 @@ TRAJECTORY_BUILDER_2D = {
   loop_closure_adaptive_voxel_filter = {
     max_length = 0.9,
     min_num_points = 100,
-    max_range = 50.,
+    max_range = 6.,
   },
 
   use_online_correlative_scan_matching = false,
@@ -112,11 +112,11 @@ TRAJECTORY_BUILDER_2D = {
     },
   },
 }
-MAX_3D_RANGE = 60.
+MAX_3D_RANGE = 6.
 INTENSITY_THRESHOLD = 40
 
 TRAJECTORY_BUILDER_3D = {
-  min_range = 1.,
+  min_range = 0.1,
   max_range = MAX_3D_RANGE,
   num_accumulated_range_data = 1,
   voxel_filter_size = 0.15,
@@ -124,7 +124,7 @@ TRAJECTORY_BUILDER_3D = {
   high_resolution_adaptive_voxel_filter = {
     max_length = 2.,
     min_num_points = 150,
-    max_range = 15.,
+    max_range = 6.,
   },
 
   low_resolution_adaptive_voxel_filter = {
