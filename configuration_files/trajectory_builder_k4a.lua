@@ -13,7 +13,7 @@
 -- limitations under the License.
 
 
-TRAJECTORY_BUILDER = {
+TRAJECTORY_BUILDER_K4A = {
   trajectory_builder_2d = TRAJECTORY_BUILDER_K4A2D,
   trajectory_builder_3d = TRAJECTORY_BUILDER_K4A3D,
 --  pure_localization_trimmer = {

@@ -44,8 +44,8 @@ options = {
   landmarks_sampling_ratio = 1.,
 }
 
-MAP_BUILDER.use_trajectory_builder_3d = true
-MAP_BUILDER.num_background_threads = 4
+MAP_BUILDER_K4A.use_trajectory_builder_3d = true
+MAP_BUILDER_K4A.num_background_threads = 4
 
 --- Max range of the depth sensor
 MAX_3D_LASER_RANGE_METERS = 10
@@ -89,19 +89,19 @@ TRAJECTORY_BUILDER_3D.ceres_scan_matcher.translation_weight = 5
 TRAJECTORY_BUILDER_3D.ceres_scan_matcher.rotation_weight = 10
 TRAJECTORY_BUILDER_3D.ceres_scan_matcher.ceres_solver_options.num_threads = 4
   
-POSE_GRAPH.constraint_builder.sampling_ratio = 0.2
-POSE_GRAPH.optimization_problem.ceres_solver_options.max_num_iterations = 10
-POSE_GRAPH.constraint_builder.min_score = 0.6
-POSE_GRAPH.constraint_builder.log_matches = true
-POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher_3d.min_rotational_score = 0.6
-POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher_3d.linear_xy_search_window = 2.
+POSE_GRAPH_K4A.constraint_builder.sampling_ratio = 0.2
+POSE_GRAPH_K4A.optimization_problem.ceres_solver_options.max_num_iterations = 10
+POSE_GRAPH_K4A.constraint_builder.min_score = 0.6
+POSE_GRAPH_K4A.constraint_builder.log_matches = true
+POSE_GRAPH_K4A.constraint_builder.fast_correlative_scan_matcher_3d.min_rotational_score = 0.6
+POSE_GRAPH_K4A.constraint_builder.fast_correlative_scan_matcher_3d.linear_xy_search_window = 2.
 
-POSE_GRAPH.optimization_problem.huber_scale = 1e1
-POSE_GRAPH.optimization_problem.acceleration_weight = 1e1
-POSE_GRAPH.optimization_problem.rotation_weight = 1e1
+POSE_GRAPH_K4A.optimization_problem.huber_scale = 1e1
+POSE_GRAPH_K4A.optimization_problem.acceleration_weight = 1e1
+POSE_GRAPH_K4A.optimization_problem.rotation_weight = 1e1
 
-POSE_GRAPH.optimize_every_n_nodes = 10
+POSE_GRAPH_K4A.optimize_every_n_nodes = 10
 
-POSE_GRAPH.global_sampling_ratio = 0.3
+POSE_GRAPH_K4A.global_sampling_ratio = 0.3
 
 return options
