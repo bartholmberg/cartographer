@@ -18,8 +18,8 @@ include "map_builder_k4a.lua"
 include "trajectory_builder_k4a.lua"
 
 options = {
-  map_builder = MAP_BUILDER_K4A,
-  trajectory_builder = TRAJECTORY_BUILDER_K4A,
+  map_builder = MAP_BUILDER,
+  trajectory_builder = TRAJECTORY_BUILDER,
   map_frame = "map",
   tracking_frame = "imu_link",
   published_frame = "camera_base",
@@ -44,8 +44,8 @@ options = {
   landmarks_sampling_ratio = 1.,
 }
 
-MAP_BUILDER_K4A.use_trajectory_builder_3d = true
-MAP_BUILDER_K4A.num_background_threads = 4
+MAP_BUILDER.use_trajectory_builder_3d = true
+MAP_BUILDER.num_background_threads = 4
 
 --- Max range of the depth sensor
 MAX_3D_LASER_RANGE_METERS = 10

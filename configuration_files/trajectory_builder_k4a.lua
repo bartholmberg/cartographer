@@ -11,18 +11,6 @@
 -- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
-
-
-TRAJECTORY_BUILDER_K4A = {
-  trajectory_builder_2d = TRAJECTORY_BUILDER_2D,
-  trajectory_builder_3d = TRAJECTORY_BUILDER_3D,
---  pure_localization_trimmer = {
---    max_submaps_to_keep = 3,
---  },
-  collate_fixed_frame = true,
-  collate_landmarks = false,
-}
-
 TRAJECTORY_BUILDER_2D = {
   use_imu_data = true,
   min_range = 0.,
@@ -223,3 +211,15 @@ TRAJECTORY_BUILDER_3D = {
   -- CeresScanMatcher will CHECK-fail.
   use_intensities = false,
 }
+
+
+TRAJECTORY_BUILDER = {
+  trajectory_builder_2d = TRAJECTORY_BUILDER_2D,
+  trajectory_builder_3d = TRAJECTORY_BUILDER_3D,
+--  pure_localization_trimmer = {
+--    max_submaps_to_keep = 3,
+--  },
+  collate_fixed_frame = true,
+  collate_landmarks = false,
+}
+
