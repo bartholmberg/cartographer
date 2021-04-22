@@ -14,12 +14,12 @@
 --
 -- Portions Copyright (c) Microsoft Corporation
 
-include "map_builder.lua"
-include "trajectory_builder.lua"
+include "map_builder_k4a.lua"
+include "trajectory_builder_k4a.lua"
 
 options = {
-  map_builder = MAP_BUILDER,
-  trajectory_builder = TRAJECTORY_BUILDER,
+  map_builder = MAP_BUILDER_K4A,
+  trajectory_builder = TRAJECTORY_BUILDER_K4A,
   map_frame = "map",
   tracking_frame = "imu_link",
   published_frame = "camera_base",

@@ -88,22 +88,27 @@ void PoseExtrapolator::AddPose(const common::Time time,
   extrapolation_imu_tracker_ = absl::make_unique<ImuTracker>(*imu_tracker_);
 }
 static int imucnt = 0;
+static int cntinner = 0;
+static int x[30];
+//static tImuDat;
 void PoseExtrapolator::AddImuData(const sensor::ImuData& imu_data) {
     // BAH, april 15,2021
  // CHECK(timed_pose_queue_.empty() || imu_data.time >= timed_pose_queue_.back().time);
   //  if ( timed_pose_queue_.empty() || (imu_data.time >= timed_pose_queue_.back().time) )
       //LOG(INFO <<"IMU add fail, either timed pose queue empty or old imu data\n";
   //    return;
-   
-    imu_data_.push_back(imu_data);
+    auto tImuDat = new sensor::ImuData{imu_data};
+    //tImuDat->linear_acceleration[0] = -tImuDat->linear_acceleration[2];
+    //tImuDat->linear_acceleration[2] = 0;
+    imu_data_.push_back(*tImuDat);
     if ((imucnt++ % 15) == 0) {
-       std::chrono::duration<double> tmpt =imu_data.time -timed_pose_queue_.back().time;
+      std::chrono::duration<double> tmpt =imu_data.time -timed_pose_queue_.back().time;
        //auto tsec=std::chrono::duration_cast<std::chrono::seconds>(tmpt);
        //static auto weird = (int)tsec.count();
-     //  std::cout << "duration: " << tsec.count() << std::endl;
-       int weird = imucnt;
-       LOG(INFO) << "imu sample: " << imu_data.linear_acceleration << " "
-                 << imu_data.angular_velocity <<"duration: " <<weird  <<std::endl;
+      x[cntinner++ % 30] = cntinner;//tmpt.count();
+      LOG(INFO) << "imu sample: " << imu_data.linear_acceleration << " "
+                 << imu_data.angular_velocity << "duration: " << imucnt
+                 << std::endl;
     }
   TrimImuData();
 }
@@ -205,7 +210,7 @@ void PoseExtrapolator::TrimOdometryData() {
     odometry_data_.pop_front();
   }
 }
-
+//  BAH,  IMU stuff to look at
 void PoseExtrapolator::AdvanceImuTracker(const common::Time time,
                                          ImuTracker* const imu_tracker) const {
   CHECK_GE(time, imu_tracker->time());

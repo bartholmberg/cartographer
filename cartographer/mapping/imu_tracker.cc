@@ -40,6 +40,7 @@ void ImuTracker::Advance(const common::Time time) {
   //CHECK_LE(time_, time);
   const double delta_t = common::ToSeconds(time - time_);
   //BAH, 4/7 update as soon as possible
+  //
   time_ = time;
   if (delta_t < 0) {
     LOG(INFO, "imu time fell behind");
