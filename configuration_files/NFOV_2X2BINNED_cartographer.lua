@@ -13,7 +13,7 @@
 -- limitations under the License.
 --
 -- Portions Copyright (c) Microsoft Corporation
-
+-- BAH, 4/23
 include "map_builder_k4a.lua"
 include "trajectory_builder_k4a.lua"
 
@@ -22,7 +22,7 @@ options = {
   trajectory_builder = TRAJECTORY_BUILDER,
   map_frame = "map",
   tracking_frame = "imu_link",
-  published_frame = "camera_base",
+  published_frame = "base_link",
   odom_frame = "odom",
   provide_odom_frame = true,
   publish_frame_projected_to_2d = false,
