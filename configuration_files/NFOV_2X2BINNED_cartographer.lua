@@ -52,7 +52,7 @@ MAP_BUILDER.num_background_threads = 4
 --- Max range of the depth sensor
 MAX_3D_LASER_RANGE_METERS = 10
 -- Minimum range of the depth sensor
-MIN_3D_LASER_RANGE_METERS = 0.1
+MIN_3D_LASER_RANGE_METERS = 0
 
 --- Maximum distance in which to build the high-resolution voxel grid
 --- Increasing this value increases the distance over which the system will attempt to create the high-resolution voxel grid
