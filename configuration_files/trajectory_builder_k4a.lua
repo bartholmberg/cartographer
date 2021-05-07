@@ -69,7 +69,7 @@ TRAJECTORY_BUILDER_2D = {
     },
     imu_based = {
       pose_queue_duration = 5.,
-      gravity_constant = -9.806,
+      gravity_constant = 9.806,
       pose_translation_weight = 1.,
       pose_rotation_weight = 1.,
       imu_acceleration_weight = 1.,
